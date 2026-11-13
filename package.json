@@ -1,0 +1,12 @@
+{
+  "name": "smarthr-candidate-portal",
+  "private": true,
+  "description": "SmartHR - Module 1: Cổng Ứng viên (demo)",
+  "workspaces": ["backend", "frontend"],
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev -w @smarthr/candidate-portal-api\" \"npm run dev -w @smarthr/candidate-portal-web\"",
+    "seed": "npm run seed -w @smarthr/candidate-portal-api",
+    "build": "npm run build -w @smarthr/candidate-portal-web"
+  },
+  "devDependencies": { "concurrently": "^9.0.1" }
+}
